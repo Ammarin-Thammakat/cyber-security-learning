@@ -1,7 +1,5 @@
 <div align="center">
 
-<!-- ส่วนหัวและโลโก้ -->
-
 <h1>🛡️ Cyber Security Learning Platform</h1>
 
 <p>
@@ -12,21 +10,6 @@
 
 ศึกษาทฤษฎี | ทดสอบความรู้ | ฝึกปฏิบัติ Virtual Labs
 </p>
-
-<!-- Badges (ป้ายสถานะสวยๆ) -->
-
-<p>
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/PHP-8.2%2B-777BB4%3Fstyle%3Dfor-the-badge%26logo%3Dphp%26logoColor%3Dwhite" alt="PHP">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/CodeIgniter-4-EF4223%3Fstyle%3Dfor-the-badge%26logo%3Dcodeigniter%26logoColor%3Dwhite" alt="CodeIgniter">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/MySQL-Database-4479A1%3Fstyle%3Dfor-the-badge%26logo%3Dmysql%26logoColor%3Dwhite" alt="MySQL">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Bootstrap-5-7952B3%3Fstyle%3Dfor-the-badge%26logo%3Dbootstrap%26logoColor%3Dwhite" alt="Bootstrap">
-</p>
-
-<!-- ใส่รูป Screenshot ตรงนี้ (ถ้ามี) -->
-
-<!-- <img src="screenshots/dashboard.png" alt="Dashboard Preview" width="800" style="border-radius: 10px;"> -->
-
-</div>
 
 ✨ ฟีเจอร์เด่น (Highlights)
 
@@ -145,5 +128,5 @@ spark           <-- ตัวรันคำสั่งของ CodeIgniter
 โปรเจกต์นี้จัดทำขึ้นเพื่อ การศึกษา (Educational Purposes) เท่านั้น เทคนิคการเจาะระบบใน Virtual Labs ถูกจำลองขึ้นเพื่อให้เข้าใจหลักการทำงานและวิธีป้องกัน ห้ามนำไปใช้กับระบบจริงภายนอกโดยไม่ได้รับอนุญาต
 
 <div align="center">
-Developed by <strong>[ชื่อของคุณ]</strong>
+Developed by <strong>[Ammarin Thammakat]</strong>
 </div>
