@@ -1,68 +1,136 @@
-# CodeIgniter 4 Application Starter
+🛡️ Cyber Security Learning Platform
 
-## What is CodeIgniter?
+แพลตฟอร์มการเรียนรู้ด้านความปลอดภัยทางไซเบอร์แบบครบวงจร (Web-based Application) ที่พัฒนาขึ้นเพื่อให้ผู้เรียนได้ศึกษาทฤษฎี ทดสอบความรู้ และฝึกปฏิบัติจริงผ่านระบบห้องปฏิบัติการจำลอง (Virtual Labs) อย่างปลอดภัย
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+✨ ฟีเจอร์หลัก (Key Features)
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+👨‍💻 สำหรับผู้เรียน (User/Student)
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+ระบบสมาชิก: ลงทะเบียน, เข้าสู่ระบบ, แก้ไขข้อมูลส่วนตัว, เปลี่ยนรูปโปรไฟล์ (Quick Upload)
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+บทเรียน (Learning): เรียนรู้ผ่านวิดีโอและเนื้อหา พร้อมดาวน์โหลดเอกสารประกอบการเรียน (PDF/PPT)
 
-## Installation & updates
+ระบบปลดล็อกบทเรียน: ต้องเรียนและสอบผ่านบทก่อนหน้าก่อน จึงจะเข้าเรียนบทถัดไปได้ (Unlock Progression)
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+แบบทดสอบ (Quiz): วัดผลหลังเรียนจบ เก็บคะแนนและคำนวณอัตราความสำเร็จ
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+ติดตามผลการเรียน: ดูประวัติคะแนนสอบ และกราฟความคืบหน้า (Progress Bar)
 
-## Setup
+ห้องปฏิบัติการจำลอง (Virtual Labs): ฝึกเจาะระบบในสภาพแวดล้อมจำลองกว่า 12 ฐาน
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+แจ้งปัญหา (Support): ส่งข้อความแจ้งปัญหาการใช้งานไปยังผู้ดูแลระบบ
 
-## Important Change with index.php
+👮‍♂️ สำหรับผู้ดูแลระบบ (Administrator)
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Dashboard: ดูภาพรวมสถิติ, จำนวนผู้ใช้, คะแนนเฉลี่ย และรายการแจ้งปัญหาค้าง (Notification Badge)
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+จัดการผู้ใช้งาน: ค้นหาและลบสมาชิกที่ไม่เหมาะสม
 
-**Please** read the user guide for a better explanation of how CI4 works!
+จัดการบทเรียน: เพิ่ม/ลบ/แก้ไข เนื้อหาบทเรียน, วิดีโอ และไฟล์เอกสารแนบ
 
-## Repository Management
+จัดการข้อสอบ: สร้างชุดข้อสอบ และแก้ไขโจทย์/เฉลยรายข้อได้
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+จัดการเรื่องร้องเรียน: ตอบรับและเปลี่ยนสถานะรายการแจ้งปัญหา
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+🧪 รายชื่อห้องปฏิบัติการจำลอง (Virtual Labs)
 
-## Server Requirements
+ระบบจำลองสถานการณ์การโจมตีทางไซเบอร์เพื่อให้ผู้เรียนเข้าใจหลักการและวิธีป้องกัน:
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+Phishing Email: จับผิดอีเมลหลอกลวง
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+SQL Injection: การ Bypass หน้า Login
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+XSS (Cross-Site Scripting): การฝัง Script ขโมยข้อมูล
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+Path Traversal (LFI): การเข้าถึงไฟล์ความลับใน Server
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Remote File Inclusion (RFI): การสั่งรันไฟล์จากภายนอก
+
+Dictionary Attack: การเดารหัสผ่านโดยใช้ Wordlist (Customizable)
+
+Command Injection: การแทรกคำสั่ง OS ผ่านหน้าเว็บ
+
+IDOR: การเข้าถึงข้อมูลผู้อื่นโดยไม่ได้รับอนุญาต
+
+Web Shell Upload: การอัปโหลดไฟล์อันตรายเพื่อยึดเครื่อง (Interactive)
+
+Cookie Manipulation: การแก้ไขสถานะผู้ใช้เพื่อเป็น Admin
+
+EternalBlue (MS17-010): จำลองการเจาะระบบ Windows 7
+
+Business Logic Flaw: การโกงราคาสินค้าในตะกร้า
+
+🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
+
+Language: PHP 8.2+
+
+Framework: CodeIgniter 4 (MVC Architecture)
+
+Database: MySQL / MariaDB
+
+Frontend: HTML5, CSS3, JavaScript, Bootstrap 5
+
+Tools: VS Code, XAMPP, Git, Composer
+
+🚀 วิธีติดตั้งและรันโปรเจกต์ (Installation)
+
+Clone โปรเจกต์
+
+git clone [https://github.com/yourusername/cyber-security-learning.git](https://github.com/yourusername/cyber-security-learning.git)
+
+
+ติดตั้ง Dependencies (ถ้ามี)
+
+composer install
+
+
+ตั้งค่าฐานข้อมูล
+
+สร้างฐานข้อมูลใน MySQL (เช่น cyber_learning_db)
+
+Import ไฟล์ database.sql ที่อยู่ในโฟลเดอร์หลักเข้าสู่ฐานข้อมูล
+
+เปลี่ยนชื่อไฟล์ env เป็น .env
+
+แก้ไขค่าการเชื่อมต่อใน .env:
+
+database.default.hostname = localhost
+database.default.database = cyber_learning_db
+database.default.username = root
+database.default.password = 
+
+
+รันเซิร์ฟเวอร์
+
+php spark serve
+
+
+หรือนำไปวางใน htdocs ของ XAMPP
+
+เข้าใช้งาน
+
+เปิด Browser ไปที่ http://localhost:8080
+
+📂 โครงสร้างฐานข้อมูล (Database Schema)
+
+ไฟล์ database.sql ประกอบด้วยตารางหลักดังนี้:
+
+users - เก็บข้อมูลสมาชิก
+
+lessons - เก็บเนื้อหาบทเรียน
+
+quizzes - เก็บชุดข้อสอบ
+
+questions - เก็บคำถามและเฉลย
+
+quiz_attempts - เก็บประวัติคะแนนสอบ
+
+simulations - เก็บข้อมูล Lab จำลอง
+
+tickets - เก็บข้อมูลการแจ้งปัญหา
+
+⚠️ ข้อควรระวัง (Disclaimer)
+
+โปรเจกต์นี้จัดทำขึ้นเพื่อ การศึกษา (Educational Purposes) เท่านั้น เทคนิคการเจาะระบบใน Virtual Labs ถูกจำลองขึ้นเพื่อให้เข้าใจหลักการป้องกัน ห้ามนำไปใช้กับระบบจริงหรือบุคคลภายนอกโดยไม่ได้รับอนุญาต
+
+Developed by: [Ammarin Thammakat]
